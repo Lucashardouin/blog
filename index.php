@@ -1,7 +1,6 @@
 <?php
 require_once('inc/init.php');
 
-header('Location: /index.php');
 
 $requete = $pdo->query("SELECT * FROM posts LEFT JOIN users USING (id_user)");
 $article = $requete->fetchAll(PDO::FETCH_ASSOC);
